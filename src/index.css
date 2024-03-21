@@ -8,21 +8,42 @@ html {
   background: linear-gradient(-90deg, hsla(262, 60%, 38%, 1) 0%, hsla(284, 100%, 47%, 1) 80%, hsla(299, 100%, 49%, 1) 100%);
   background: -moz-linear-gradient(-90deg, hsla(262, 60%, 38%, 1) 0%, hsla(284, 100%, 47%, 1) 80%, hsla(299, 100%, 49%, 1) 100%);
   background: -webkit-linear-gradient(-90deg, hsla(262, 60%, 38%, 1) 0%, hsla(284, 100%, 47%, 1) 80%, hsla(299, 100%, 49%, 1) 100%);
-  /*filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#52279D", endColorstr="#B200F2", GradientType=1 );*/
+  // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#52279D", endColorstr="#B200F2", GradientType=1 );
+
+  /* Disables Text Highlighting */
+  :not(input):not(textarea),
+  :not(input):not(textarea)::after,
+  :not(input):not(textarea)::before {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+  }
+  input, button, textarea, :focus {
+    outline: none; // You should add some other style for :focus to help UX/a11y
+  }
+
+
 }
 
 body {
   /* Text Styling */
-  /*font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;*/
   font-family: "Arial Rounded MT Bold", sans-serif;
   margin: auto;
   max-width: 38rem;
   padding: 2rem;
   color: white;
+
+}
+
+.title {
+  /* TUF Title */
+  scale: 2.4;
   justify-content: center;
   text-align: center;
 }
 
-.title {
-
+.iconDropdown {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
 }

@@ -12,7 +12,7 @@ const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 2048 / scaleFactor,
-    height: 1152 / scaleFactor,
+    height: 1412 / scaleFactor,
     webPreferences: {
       zoomFactor: 1.0 / scaleFactor,
 
@@ -55,3 +55,4 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+

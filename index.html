@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>The Universal Forums</title>
+<html lang="en">
 
+  <head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/2f87171fa4.js" crossorigin="anonymous"></script>
+    <title>The Universal Forums</title>
   </head>
+  
   <body>
-    <h1 class>The Universal Forums</h1>
-    <p>Welcome to your Electron application.</p>
+    <div class="top">
+
+      <h1 class="title">The Universal Forums</h1>
+
+      <div class="options">
+
+        <div class="ratingSystem">
+          <button class="iconDropdown" onclick="myFunction()">
+            <i class="fa-solid fa-caret-down"></i>
+          </button>
+        </div>
+
+
+        <i class="fa-solid fa-caret-down"></i>
+        <img src="">
+
+        <script>
+          function myFunction() {
+            document.getElementById("myDropdown").classList.toggle("show");
+          }
+        </script>
+      </div>
+    </div>
+
+
     <script type="module" src="/src/renderer.ts"></script>
   </body>
+
 </html>
