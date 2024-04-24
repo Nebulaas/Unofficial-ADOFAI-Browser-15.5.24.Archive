@@ -1,1 +1,1 @@
-Unofficial (Not endorsed by either TUF or 7thBeatGames) Custom Level Browser, Built using Electron, Vite and Typescript
+Unofficial (Not endorsed by either TUF or 7thBeatGames) Custom Level Browser, Built using Electron, Vite and Typescript.

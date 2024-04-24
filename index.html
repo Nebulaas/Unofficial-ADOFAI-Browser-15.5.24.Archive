@@ -2,34 +2,121 @@
 <html lang="en">
 
   <head>
-    <meta charset="UTF-8" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" content="width=device-width initial-scale=1">
+
+    <!-- Fontawesome Kit -->
     <script src="https://kit.fontawesome.com/2f87171fa4.js" crossorigin="anonymous"></script>
-    <title>The Universal Forums</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="src/components/fonts.css">
+
+    <!-- Scripts -->
+    <script src="/src/components/ratingDropdown.tsx"></script>
+
+    <title>ADOFAI Browser</title>
+
   </head>
-  
+
+
+
+
   <body>
-    <div class="top">
 
-      <h1 class="title">The Universal Forums</h1>
+    <!-- Left Side of Window -->
+    <div id="navSide" >
 
-      <div class="options">
+      <div>
+        <img id="temp" class="tuf-icon" src="src/assets/T21C-assets/serverIcons/TUF.png" alt="PGU"/>
+<!--        <p class="text">Hello</p>-->
+      </div>
 
-        <div class="ratingSystem">
-          <button class="iconDropdown" onclick="myFunction()">
-            <i class="fa-solid fa-caret-down"></i>
-          </button>
+      <div id="navSideAccount">
+        <i id="accountIcon" class="fa-solid fa-circle-user"></i>
+      </div>
+
+    </div>
+
+    <!-- Top Section of Window -->
+    <div id="navTop">
+
+      <!-- App Logo (Temporary) -->
+      <div id="navTopLeft">
+
+        <div id="navTopMenu">
+          <i id="sideNavButton" class="fa-solid fa-bars"></i>
         </div>
 
+        <div id="navTopLogo">
+          <a href="/index.html">
+            <h1 id="homeLogo">AD<img id="logoPlanets" src="src/assets/images/ADOFAI_Planets.png" alt="O"/>FAI Browser</h1>
+          </a>
+        </div>
 
-        <i class="fa-solid fa-caret-down"></i>
-        <img src="">
-
-        <script>
-          function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-          }
-        </script>
       </div>
+
+
+      <div id="navTopMid">
+        <div>
+
+        </div>
+      </div>
+
+
+      <div id="navTopRight">
+
+        <div id="navTopBrowse">
+          <a href="/index.html">
+            <h1 id="browseLink">Browse</h1>
+          </a>
+        </div>
+
+        <div id="navTopSubmit">
+          <a href="/index.html">
+            <h1 id="submitLink">Submit</h1>
+          </a>
+        </div>
+
+        <div id="navTopAbout">
+          <a href="/index.html">
+            <h1 id="aboutLink">About</h1>
+          </a>
+        </div>
+
+<!--        <div id="navTopAccount">-->
+<!--          <a href="/index.html">-->
+<!--            <i id="accountIcon" class="fa-solid fa-circle-user"></i>-->
+<!--          </a>-->
+<!--        </div>-->
+
+      </div>
+
+      <!-- Level Rating System Selector -->
+<!--      <div id="ratingSystem">-->
+
+<!--        &lt;!&ndash; Active Rating System & Dropdown &ndash;&gt;-->
+<!--        <button class="activeSystem dropbtn" onclick="ratingDropdown()">-->
+<!--          <img id="TUF-active" class="dropbtn tuf-icon" src="T21C-assets/serverIcons/TUF.png" alt="PGU"/>-->
+<!--          <img id="T21C-active" class="dropbtn tuf-icon hide" src="T21C-assets/serverIcons/T21+C.png" alt="T21+C"/>-->
+
+<!--          <i id="ratingDropdownArrow" class="dropbtn fa-solid fa-caret-down"></i>-->
+<!--        </button>-->
+
+<!--        &lt;!&ndash; Dropdown Rating System Selections &ndash;&gt;-->
+<!--        <div class="dropdownContent" id="systemDropdown">-->
+<!--          <img id="TUF-inactive" class="inactiveSystem tuf-icon" src="T21C-assets/serverIcons/T21+C.png" alt="T21+C"/>-->
+<!--          <img id="T21C-inactive" class="inactiveSystem tuf-icon hide" src="T21C-assets/serverIcons/TUF.png" alt="PGU"/>-->
+<!--        </div>-->
+
+<!--      </div>-->
+
+<!--      <h1 class="title">ADOFAI Browser</h1>-->
+<!--      <h1 class="title hide">The Universal Forums</h1>-->
+
+    </div>
+
+    <div id="pageMain">
+
     </div>
 
 

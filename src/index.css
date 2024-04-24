@@ -1,14 +1,23 @@
+:root {
+  --nav-push-percent: 7%;
+}
+
 html {
   /* Scaling */
   min-height: 100%;
-  min-width:100%;
+  min-width: 100%;
 
   /* TUF Themed Background Gradient */
-  background: hsla(262, 60%, 38%, 1);
-  background: linear-gradient(-90deg, hsla(262, 60%, 38%, 1) 0%, hsla(284, 100%, 47%, 1) 80%, hsla(299, 100%, 49%, 1) 100%);
-  background: -moz-linear-gradient(-90deg, hsla(262, 60%, 38%, 1) 0%, hsla(284, 100%, 47%, 1) 80%, hsla(299, 100%, 49%, 1) 100%);
-  background: -webkit-linear-gradient(-90deg, hsla(262, 60%, 38%, 1) 0%, hsla(284, 100%, 47%, 1) 80%, hsla(299, 100%, 49%, 1) 100%);
-  // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#52279D", endColorstr="#B200F2", GradientType=1 );
+  /*background: hsla(262, 60%, 38%, 1);*/
+  /*background: -webkit-linear-gradient(-90deg, hsla(262, 60%, 38%, 1) 0%, hsla(284, 100%, 47%, 1) 80%, hsla(299, 100%, 49%, 1) 100%);*/
+  /*background: linear-gradient(-90deg, hsla(262, 60%, 38%, 1) 0%, hsla(284, 100%, 47%, 1) 80%, hsla(299, 100%, 49%, 1) 100%);*/
+  /*background: -moz-linear-gradient(-90deg, hsla(262, 60%, 38%, 1) 0%, hsla(284, 100%, 47%, 1) 80%, hsla(299, 100%, 49%, 1) 100%);*/
+
+  /* Desaturated version of background gradient */
+  background: rgba(46,21,123,1);
+  background: linear-gradient(180deg, rgba(46,21,123,1) 0%, rgba(60,21,123,1) 17%, rgba(71,10,123,1) 34%, rgba(75,14,119,1) 51%, rgba(81,14,119,1) 68%, rgba(93,20,115,1) 84%, rgba(113,34,121,1) 100%);
+  background: -moz-linear-gradient(180deg, rgba(46,21,123,1) 0%, rgba(60,21,123,1) 17%, rgba(71,10,123,1) 34%, rgba(75,14,119,1) 51%, rgba(81,14,119,1) 68%, rgba(93,20,115,1) 84%, rgba(113,34,121,1) 100%);
+  background: -webkit-linear-gradient(-90deg, rgba(46,21,123,1) 0%, rgba(60,21,123,1) 17%, rgba(71,10,123,1) 34%, rgba(75,14,119,1) 51%, rgba(81,14,119,1) 68%, rgba(93,20,115,1) 84%, rgba(113,34,121,1) 100%);
 
   /* Disables Text Highlighting */
   :not(input):not(textarea),
@@ -16,34 +25,216 @@ html {
   :not(input):not(textarea)::before {
     -webkit-user-select: none;
     user-select: none;
-    cursor: default;
+    /*cursor: default;*/
   }
   input, button, textarea, :focus {
-    outline: none; // You should add some other style for :focus to help UX/a11y
+    outline: none;
   }
-
-
 }
 
 body {
   /* Text Styling */
-  font-family: "Arial Rounded MT Bold", sans-serif;
+  font-family: Quicksand-Bold, "Arial Rounded MT Bold", sans-serif;
   margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
   color: white;
+}
+
+/* Side Nav Styles */
+#navSide {
+  background: rgba(0,0,0,0.15);
+  border-right: 2px solid;
+  border-color: rgba(0,0,0,0.15);
+  backdrop-filter: blur(5px);
+
+  padding: 5px 10px;
+  height: calc(100% - var(--nav-push-percent));
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  top: var(--nav-push-percent);
+
+  align-content: space-between;
 
 }
 
-.title {
-  /* TUF Title */
-  scale: 2.4;
-  justify-content: center;
-  text-align: center;
+#navSide > * {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 4%;
 }
 
-.iconDropdown {
-  width: 100px;
-  height: 100px;
-  border-radius: 50px;
+
+/* Top Nav Styles */
+#navTop {
+  background: rgba(186,187,196,0.25);
+  /*background: radial-gradient(circle, rgba(186,187,196,.5) 0%, rgba(162,160,174,.5) 48%, rgba(132,133,144,.5) 100%);*/
+  border-bottom: 2px solid;
+  /*border-color: #47484d;*/
+  border-color: rgba(255,255,255,0.35);
+  backdrop-filter: blur(5px);
+
+  padding: 2px 20px;
+  width: 100%;
+  height: var(--nav-push-percent);
+  box-sizing: border-box;
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  z-index: 10000;
+  top: 0;
+
+  vertical-align: middle;
+  align-items: center;
+  justify-content: space-between;
 }
+
+
+
+/* Top Nav Logo Styles */
+
+/* Left Top Nav Style */
+#navTopLeft {
+  display: flex;
+  flex-direction: row;
+
+  align-items: inherit;
+  justify-content: left;
+}
+
+#sideNavButton {
+
+}
+
+#homeLogo{
+  color: white;
+  text-decoration: none;
+
+  font-size: large;
+  justify-self: left;
+
+  position: relative;
+  bottom: 1.5px;
+  left: 35px;
+}
+
+#logoPlanets {
+  height: 20px;
+  width: 18px;
+
+  position: relative;
+  top: 3.65px;
+}
+
+/* Right Top Nav Style */
+#navTopRight {
+  display: flex;
+  flex-direction: row;
+
+  align-items: inherit;
+  justify-content: right;
+}
+
+#browseLink, #submitLink, #aboutLink, #accountIcon {
+  color: white;
+  text-decoration: none;
+  font-size: large;
+
+  position: relative;
+}
+
+#browseLink {
+  right: 40px;
+}
+
+#submitLink {
+  right: 20px;
+}
+
+#aboutLink {
+
+}
+
+#accountIcon {
+  /*top: 1px;*/
+}
+
+
+/* Main Page Styles */
+#pageMain {
+
+}
+
+/* Misc Styles */
+.text {
+  font-size: small;
+}
+
+.tuf-icon {
+  /* Icons from TUF */
+  width: 24px;
+  height: 24px;
+}
+
+.show {
+  display: inherit;
+  /*cursor: pointer;*/
+}
+
+.hide {
+  opacity: 0%;
+  display: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/*button {*/
+/*  border:none;*/
+/*  background-color:transparent;*/
+/*  outline:none;*/
+/*  cursor: pointer;*/
+/*}*/
+
+/*#ratingSystem {*/
+/*  border: 2px solid white;*/
+/*  border-radius: 100% 100% 30% 100%;*/
+/*  background-color: transparent;*/
+/*  position: relative;*/
+/*  cursor: pointer;*/
+/*  width: 50px;*/
+/*  height: 50px;*/
+/*}*/
+
+/*.inactiveSystem {*/
+/*  position: absolute;*/
+/*  top: 2px;*/
+/*  !*right: 0px;*!*/
+/*  !*padding-top: 10px;*!*/
+
+/*}*/
+
+/*.activeSystem {*/
+/*  position: relative;*/
+/*  right: 5px;*/
+/*}*/
+
+/*#ratingDropdownArrow {*/
+/*  color: white;*/
+/*  scale: 1.1;*/
+/*  position: absolute;*/
+/*  top: 69%;*/
+/*  right: 14%;*/
+/*}*/
+
+/*.dropdownContent {*/
+/*  display: none;*/
+/*  position: absolute;*/
+/*  background-color: #f9f9f9;*/
+/*  !*min-width: 160px;*!*/
+/*  z-index: 1;*/
+/*}*/
+

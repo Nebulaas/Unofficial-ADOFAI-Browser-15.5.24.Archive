@@ -7,16 +7,25 @@ if (require('electron-squirrel-startup')) {
 }
 
 const createWindow = () => {
-  let scaleFactor = screen.getPrimaryDisplay().scaleFactor;
+  const scaleFactor = screen.getPrimaryDisplay().scaleFactor;
 
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 2048 / scaleFactor,
-    height: 1412 / scaleFactor,
+    // show: false,
+    // autoHideMenuBar: true,
+    // frame: false,
+
+    width: 1920 / scaleFactor,
+    height: 1280 / scaleFactor,
+    minWidth: 960 / scaleFactor,
+    minHeight: 640 / scaleFactor,
     webPreferences: {
-      zoomFactor: 1.0 / scaleFactor,
+      // zoomFactor: 1.0 / scaleFactor,
 
       preload: path.join(__dirname, 'preload.js'),
+
+      // devTools: false,
+      
     },
   });
 
@@ -28,7 +37,7 @@ const createWindow = () => {
   }
 
   // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 };
 
 // This method will be called when Electron has finished
